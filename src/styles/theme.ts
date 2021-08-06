@@ -1,10 +1,12 @@
 export default {
   colors: {
+    primary: '#F5C91E',
     header: '#1A1A1A',
     shape: '#FFFFFF',
     background: '#F4F4F4',
-    text: '#666',
     section_title: '#9B9B9B',
-    primary: '#F5C91E',
+    text: '#666',
+    placeholder: '#C9C9C9',
+    line: '#717171',
   },
 };

@@ -6,27 +6,40 @@ import { useTheme } from 'styled-components';
 import {
   Container,
   UserAvatar,
+  UserAvatarContainer,
+  UserProfileButton,
   UserAddressContainer,
   UserAddressMessage,
   UserAddress,
   MoreInformationsButton,
+  Content,
 } from './styles';
+import { SearchInput } from '../SearchInput';
 
 export function Header(): JSX.Element {
   const theme = useTheme();
 
   return (
     <Container>
-      <UserAvatar source={{ uri: 'https://github.com/rennand.png' }} />
-      <UserAddressContainer>
-        <UserAddressMessage>Receber agora em</UserAddressMessage>
-        <UserAddress numberOfLines={1}>
-          Rua de teste, 2096 Bairro, Cidade
-        </UserAddress>
-      </UserAddressContainer>
-      <MoreInformationsButton>
-        <Feather name="chevron-down" color={theme.colors.shape} size={20} />
-      </MoreInformationsButton>
+      <Content>
+        <UserAvatarContainer>
+          <UserAvatar source={{ uri: 'https://github.com/rennand.png' }} />
+          <UserProfileButton>
+            <Feather name="menu" size={10} color={theme.colors.text} />
+          </UserProfileButton>
+        </UserAvatarContainer>
+        <UserAddressContainer>
+          <UserAddressMessage>Receber agora em</UserAddressMessage>
+          <UserAddress numberOfLines={1}>
+            Rua beco da paz, 2096 Piçarreira, Cidade
+          </UserAddress>
+        </UserAddressContainer>
+        <MoreInformationsButton>
+          <Feather name="chevron-down" color={theme.colors.shape} size={20} />
+        </MoreInformationsButton>
+      </Content>
+
+      <SearchInput />
     </Container>
   );
 }
