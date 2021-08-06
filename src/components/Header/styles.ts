@@ -28,8 +28,8 @@ export const UserAvatarContainer = styled.View`
 `;
 
 export const UserProfileButton = styled(RectButton)`
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
 
   align-items: center;
   justify-content: center;
@@ -38,8 +38,8 @@ export const UserProfileButton = styled(RectButton)`
 
   position: absolute;
 
-  right: -5px;
-  bottom: 0px;
+  right: -3px;
+  bottom: -1px;
 
   background-color: ${({ theme }) => theme.colors.shape};
 `;

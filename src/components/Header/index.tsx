@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Feather } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { useTheme } from 'styled-components';
 import {
@@ -25,7 +25,11 @@ export function Header(): JSX.Element {
         <UserAvatarContainer>
           <UserAvatar source={{ uri: 'https://github.com/rennand.png' }} />
           <UserProfileButton>
-            <Feather name="menu" size={10} color={theme.colors.text} />
+            <MaterialCommunityIcons
+              name="menu"
+              size={10}
+              color={theme.colors.text}
+            />
           </UserProfileButton>
         </UserAvatarContainer>
         <UserAddressContainer>
@@ -35,7 +39,11 @@ export function Header(): JSX.Element {
           </UserAddress>
         </UserAddressContainer>
         <MoreInformationsButton>
-          <Feather name="chevron-down" color={theme.colors.shape} size={20} />
+          <MaterialCommunityIcons
+            name="chevron-down"
+            color={theme.colors.shape}
+            size={20}
+          />
         </MoreInformationsButton>
       </Content>
 
