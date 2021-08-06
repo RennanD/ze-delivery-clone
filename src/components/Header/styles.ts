@@ -8,7 +8,7 @@ import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.header};
 
-  padding: 20px;
+  padding: 15px;
   padding-top: ${(Platform.OS === 'ios' ? getStatusBarHeight() : 0) + 10}px;
 `;
 
