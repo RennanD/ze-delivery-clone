@@ -1,0 +1,90 @@
+[
+  {
+    "category": {
+      "id": "1",
+      "key": "beer",
+      "name": "CERVEJAS",
+      "products": [
+        {
+          "id": "1",
+          "description": "Brahma Duplo Malte 350ml",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00010266_993f6927-e697-4dca-b4e6-e118d99be4c8.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 2.99,
+          "discount": 0
+        },
+        {
+          "id": "2",
+          "description": "Brahma Chopp 300ml | Apenas o Líquido",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00008729_e095d6d8-7491-458c-8225-1ee8e9b76d27.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 1.99,
+          "discount": 0
+        },
+        {
+          "id": "3",
+          "description": "Brahma Duplo Malte 600ml | Vasilhame Incluso",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00010270_136ef006-495f-4833-987d-0bad35477e99.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 7.49,
+          "discount": 0
+        },
+        {
+          "id": "4",
+          "description": "Brahma Duplo Malte 600ml | Apenas o Líquido",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00010267_7d528cff-dcf0-4a05-aef9-fc3ce95e7aa4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 6.49,
+          "discount": 20
+        },
+        {
+          "id": "5",
+          "description": "Original 600ml | Apenas o Líquido",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00008771_d5eab2b2-854b-4558-92d2-668f5aef0e3f.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 6.99,
+          "discount": 0
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "id": "2",
+      "key": "distilled",
+      "name": "DESTILADOS",
+      "products": [
+        {
+          "id": "1",
+          "description": "Beats Senses 269ml - Unidade",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00008599_8d1176b4-22be-4b1c-8e42-824d4a263441.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 4.49,
+          "discount": 30
+        },
+        {
+          "id": "2",
+          "description": "Smirnoff Ice 275ml",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00010802_5b65acc7-bc1c-4e04-a07f-89681962f7f5.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 7.99,
+          "discount": 0
+        },
+        {
+          "id": "3",
+          "description": "Beats Zodiac Fogo 269ml",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00012574_e7ca39e9-8a6f-4790-aa58-667a575a25a6.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 4.99,
+          "discount": 0
+        },
+        {
+          "id": "4",
+          "description": "Vodka Smirnoff 998ml",
+          "image": "https://courier-images-prod.imgix.net/product/00009518_97115052-d9fc-46c3-bc39-33b4cec15cd5.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 41.16,
+          "discount": 20
+        },
+        {
+          "id": "5",
+          "description": "Beats Zodiac Terra 269ml",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/00012573_f630ea47-d405-4810-b63b-72edb5ee9860.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 6.99,
+          "discount": 0
+        }
+      ]
+    }
+  }
+]
