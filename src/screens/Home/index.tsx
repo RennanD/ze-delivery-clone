@@ -6,6 +6,7 @@ import { Header } from '../../components/Header';
 import { HighlightsBanner } from '../../components/HighlightsBanner';
 
 import bannerImages from '../../utils/banners';
+import { OptionsMenu } from '../../components/OptionsMenu';
 
 export function Home(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ export function Home(): JSX.Element {
       <Header />
       <Content>
         <HighlightsBanner images={bannerImages} />
+        <OptionsMenu />
       </Content>
     </Container>
   );

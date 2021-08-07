@@ -6,6 +6,8 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
   width: 100%;
   padding: 20px 0;
+
+  margin-bottom: 10px;
 `;
 
 export const BannerImagesWrapper = styled.TouchableOpacity`
