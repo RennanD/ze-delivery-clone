@@ -18,4 +18,5 @@ export const Container = styled.View`
 export const SearchTextInput = styled.TextInput`
   flex: 1;
   padding: 0 20px;
+  color: ${({ theme }) => theme.colors.text};
 `;

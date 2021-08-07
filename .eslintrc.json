@@ -29,6 +29,8 @@
       "prettier/prettier": "error",
       "import/prefer-default-export": "off",
       "@typescript-eslint/no-empty-interface": "off",
+      "react/require-default-props": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
