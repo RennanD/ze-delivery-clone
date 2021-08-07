@@ -32,13 +32,14 @@ export function Header(): JSX.Element {
             />
           </UserProfileButton>
         </UserAvatarContainer>
-        <UserAddressContainer>
-          <UserAddressMessage>Receber agora em</UserAddressMessage>
-          <UserAddress numberOfLines={1}>
-            Rua beco da paz, 2096 Piçarreira, Cidade
-          </UserAddress>
-        </UserAddressContainer>
+
         <MoreInformationsButton>
+          <UserAddressContainer>
+            <UserAddressMessage>Receber agora em</UserAddressMessage>
+            <UserAddress numberOfLines={1}>
+              Rua beco da paz, 2096 Piçarreira, Teresina
+            </UserAddress>
+          </UserAddressContainer>
           <MaterialCommunityIcons
             name="chevron-down"
             color={theme.colors.shape}

@@ -3,13 +3,15 @@ import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { Platform } from 'react-native';
-import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.header};
 
   padding: 15px;
-  padding-top: ${(Platform.OS === 'ios' ? getStatusBarHeight() : 0) + 10}px;
+  padding-top: ${(Platform.OS === 'ios' ? getStatusBarHeight() : 0) + 15}px;
+  padding-bottom: 25px;
+  z-index: 1;
 `;
 
 export const Content = styled.View`
@@ -19,9 +21,9 @@ export const Content = styled.View`
 `;
 
 export const UserAvatarContainer = styled.View`
-  height: 50px;
-  width: 50px;
-  border-radius: 30px;
+  height: 42px;
+  width: 42px;
+  border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.primary};
 
   position: relative;
@@ -45,28 +47,31 @@ export const UserProfileButton = styled(RectButton)`
 `;
 
 export const UserAvatar = styled.Image`
-  height: 50px;
-  width: 50px;
-  border-radius: 30px;
+  height: 42px;
+  width: 42px;
+  border-radius: 20px;
 `;
 
 export const UserAddressContainer = styled.View`
-  flex: 1;
   margin: 0 15px;
+  flex: 1;
 `;
 
 export const UserAddressMessage = styled.Text`
-  font-size: ${RFValue(13)}px;
+  font-size: ${RFValue(12)}px;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.shape};
+  margin-bottom: 4px;
 `;
 
 export const UserAddress = styled.Text`
   font-size: ${RFValue(12)}px;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
-
-  max-width: 95%;
 `;
 
-export const MoreInformationsButton = styled(BorderlessButton)``;
+export const MoreInformationsButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+`;
