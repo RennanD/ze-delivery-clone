@@ -21,7 +21,7 @@ export const OptionButton = styled.TouchableOpacity`
 
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
 
   align-items: center;
 `;

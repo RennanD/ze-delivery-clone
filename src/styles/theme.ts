@@ -8,6 +8,6 @@ export default {
     text: '#656565',
     placeholder: '#C9C9C9',
     line: '#717171',
-    border: '#F2F2F2',
+    border: 'rgba(0, 0, 0, 0.06)',
   },
 };
