@@ -35,7 +35,7 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
       {
         translateY: interpolate(
           scrollInYAnimation.value,
-          [0, 150],
+          [0, 140],
           [0, -60],
           Extrapolate.CLAMP,
         ),
@@ -43,19 +43,19 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
     ],
     height: interpolate(
       scrollInYAnimation.value,
-      [0, 160],
-      [160, 80],
+      [0, 140],
+      [140, 80],
       Extrapolate.CLAMP,
     ),
     opacity: interpolate(
       scrollInYAnimation.value,
-      [0, 150, 300],
+      [0, 100, 140],
       [1, 0, 1],
       Extrapolate.CLAMP,
     ),
     backgroundColor: interpolateColor(
       scrollInYAnimation.value,
-      [0, 150],
+      [0, 140],
       ['#1A1A1A', 'rgba(0, 0, 0, 0.01)'],
     ),
   }));

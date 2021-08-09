@@ -64,6 +64,9 @@ export function Home(): JSX.Element {
         showsVerticalScrollIndicator={false}
         onScroll={scrollInYHandler}
         scrollEventThrottle={16}
+        contentContainerStyle={{
+          paddingBottom: 50,
+        }}
       >
         <HighlightsBanner images={bannerImages} />
         <OptionsMenu />
