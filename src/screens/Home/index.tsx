@@ -5,7 +5,7 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 
-import { Container, Content } from './styles';
+import { Container } from './styles';
 
 import { Header } from '../../components/Header';
 import { HighlightsBanner } from '../../components/HighlightsBanner';
