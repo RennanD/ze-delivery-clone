@@ -10,5 +10,6 @@ export default {
     line: '#717171',
     border: 'rgba(0, 0, 0, 0.06)',
     bold: '#000',
+    attention: '#F43F3E',
   },
 };

@@ -10,6 +10,7 @@ import {
   ProductPrice,
   shadowStyle,
   Hr,
+  BadgeDiscount,
 } from './styles';
 
 export type Product = {
@@ -28,7 +29,10 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps): JSX.Element {
   return (
-    <Container style={shadowStyle}>
+    <Container style={shadowStyle} activeOpacity={0.9}>
+      {!!product.discount && (
+        <BadgeDiscount>-{product.discount}%</BadgeDiscount>
+      )}
       <ProductImage source={{ uri: product.image }} />
       <Hr />
       <ProductInfo>

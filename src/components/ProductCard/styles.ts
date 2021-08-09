@@ -5,7 +5,7 @@ type ProductPriceProps = {
   hasDiscount?: boolean;
 };
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   height: 210px;
   width: 135px;
   /* border: 1px solid ${({ theme }) => theme.colors.border}; */
@@ -14,6 +14,20 @@ export const Container = styled.View`
 
   margin-right: 10px;
   margin-bottom: 5px;
+`;
+
+export const BadgeDiscount = styled.Text`
+  padding: 3px 5px;
+  background-color: ${({ theme }) => theme.colors.attention};
+  color: ${({ theme }) => theme.colors.shape};
+  position: absolute;
+  border-radius: 8px;
+
+  z-index: 5;
+
+  top: 7px;
+  left: 7px;
+  font-size: ${RFValue(12)}px;
 `;
 
 export const ProductInfo = styled.View`

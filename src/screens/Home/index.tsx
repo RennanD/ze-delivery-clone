@@ -37,7 +37,7 @@ export function Home(): JSX.Element {
           discountFormated: Intl.NumberFormat('pt-BR', {
             currency: 'BRL',
             style: 'currency',
-          }).format((product.discount / 100) * product.price),
+          }).format(product.price - (product.discount / 100) * product.price),
         })),
       }));
       setOptionsList(data);
