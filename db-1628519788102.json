@@ -135,14 +135,14 @@
           "id": "1",
           "description": "Red Bull Energy Drink 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00009995_526cce9e-7eaf-454f-9849-102e201c53e2.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
-          "price": 7.0,
+          "price": 7,
           "discount": 0
         },
         {
           "id": "2",
           "description": "Red Bull Sugarfree 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00009996_8d199ddc-23ad-4436-a677-9d40402a5cb4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
-          "price": 7.0,
+          "price": 7,
           "discount": 0
         },
         {

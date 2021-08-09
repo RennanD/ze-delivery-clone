@@ -9,5 +9,6 @@ export default {
     placeholder: '#C9C9C9',
     line: '#717171',
     border: 'rgba(0, 0, 0, 0.06)',
+    bold: '#000',
   },
 };

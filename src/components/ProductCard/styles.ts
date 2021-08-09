@@ -1,8 +1,12 @@
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
+
+type ProductPriceProps = {
+  hasDiscount?: boolean;
+};
 
 export const Container = styled.View`
-  height: 200px;
+  height: 210px;
   width: 135px;
   /* border: 1px solid ${({ theme }) => theme.colors.border}; */
   border-radius: 8px;
@@ -14,6 +18,8 @@ export const Container = styled.View`
 
 export const ProductInfo = styled.View`
   padding: 7px;
+  justify-content: space-between;
+  flex: 1;
 `;
 
 export const ProductImage = styled.Image`
@@ -42,9 +48,23 @@ export const ProductDescription = styled.Text`
 
 export const ProductPriceContainer = styled.View``;
 
-export const ProdcutDiscount = styled.View``;
+export const ProdcutDiscount = styled.Text`
+  color: ${({ theme }) => theme.colors.bold};
+  font-weight: bold;
+`;
 
-export const ProductPrice = styled.View``;
+export const ProductPrice = styled.Text<ProductPriceProps>`
+  color: ${({ theme }) => theme.colors.bold};
+  font-weight: bold;
+
+  ${({ hasDiscount, theme }) =>
+    hasDiscount &&
+    css`
+      color: ${theme.colors.placeholder};
+      font-weight: 400;
+      text-decoration: line-through;
+    `}
+`;
 
 export const shadowStyle = {
   shadowColor: '#000',

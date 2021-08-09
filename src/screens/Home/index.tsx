@@ -12,26 +12,35 @@ import { OptionsList, OptionsListProps } from '../../components/OptionsList';
 import api from '../../services/api';
 import { Product } from '../../components/ProductCard';
 
+export interface ResponseObject {
+  id: string;
+  key: string;
+  name: string;
+  products: Product[];
+}
+
 export function Home(): JSX.Element {
-  const [beerList, setBeerList] = useState<OptionsListProps>(
-    {} as OptionsListProps,
-  );
+  const [optionsList, setOptionsList] = useState<OptionsListProps[]>([]);
 
   useEffect(() => {
     async function loadData() {
-      const response = await api.get('/categories');
+      const response = await api.get<ResponseObject[]>('/categories');
 
-      response.data.forEach((category: any) => {
-        if (category.key === 'beer') {
-          setBeerList({
-            title: category.name,
-            products: category.products.map((product: Product) => ({
-              ...product,
-              priceFormated: Intl.NumberFormat(),
-            })),
-          });
-        }
-      });
+      const data = response.data.map(item => ({
+        title: item.name,
+        products: item.products.map(product => ({
+          ...product,
+          priceFormated: Intl.NumberFormat('pt-BR', {
+            currency: 'BRL',
+            style: 'currency',
+          }).format(product.price),
+          discountFormated: Intl.NumberFormat('pt-BR', {
+            currency: 'BRL',
+            style: 'currency',
+          }).format((product.discount / 100) * product.price),
+        })),
+      }));
+      setOptionsList(data);
     }
 
     loadData();
@@ -43,9 +52,9 @@ export function Home(): JSX.Element {
       <Content>
         <HighlightsBanner images={bannerImages} />
         <OptionsMenu />
-        <OptionsList title={beerList.title} products={beerList.products} />
-        <OptionsList title={beerList.title} products={beerList.products} />
-        <OptionsList title={beerList.title} products={beerList.products} />
+        {optionsList.map(option => (
+          <OptionsList title={option.title} products={option.products} />
+        ))}
       </Content>
     </Container>
   );

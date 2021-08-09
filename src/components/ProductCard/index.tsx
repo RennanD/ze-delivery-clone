@@ -19,7 +19,7 @@ export type Product = {
   price: number;
   priceFormated: string;
   discount: number;
-  discountFormated: number;
+  discountFormated: string;
 };
 
 type ProductCardProps = {
@@ -37,8 +37,16 @@ export function ProductCard({ product }: ProductCardProps): JSX.Element {
         </ProductDescription>
 
         <ProductPriceContainer>
-          <ProdcutDiscount>{product.discountFormated}</ProdcutDiscount>
-          <ProductPrice>{product.priceFormated}</ProductPrice>
+          {product.discount ? (
+            <>
+              <ProductPrice hasDiscount={!!product.discount}>
+                {product.priceFormated}
+              </ProductPrice>
+              <ProdcutDiscount>{product.discountFormated}</ProdcutDiscount>
+            </>
+          ) : (
+            <ProductPrice>{product.priceFormated}</ProductPrice>
+          )}
         </ProductPriceContainer>
       </ProductInfo>
     </Container>
