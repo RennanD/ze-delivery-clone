@@ -3,14 +3,16 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 5px;
 
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 
   width: 100%;
+
+  margin-bottom: 10px;
 `;
 
 export const OptionButton = styled.TouchableOpacity`

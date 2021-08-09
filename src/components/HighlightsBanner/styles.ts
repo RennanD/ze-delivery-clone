@@ -5,7 +5,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
 
   margin-bottom: 10px;
 `;
@@ -18,7 +18,7 @@ export const BannerImagesWrapper = styled.TouchableOpacity`
 
 export const BannerImage = styled.Image`
   width: 100%;
-  height: ${RFValue(268)}px;
+  height: ${RFValue(263)}px;
 `;
 
 export const IndexesContainer = styled.View`

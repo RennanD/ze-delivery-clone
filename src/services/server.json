@@ -1,6 +1,6 @@
-[
-  {
-    "category": {
+{
+  "categories": [
+    {
       "id": "1",
       "key": "beer",
       "name": "CERVEJAS",
@@ -41,10 +41,8 @@
           "discount": 0
         }
       ]
-    }
-  },
-  {
-    "category": {
+    },
+    {
       "id": "2",
       "key": "distilled",
       "name": "DESTILADOS",
@@ -86,5 +84,5 @@
         }
       ]
     }
-  }
-]
+  ]
+}
