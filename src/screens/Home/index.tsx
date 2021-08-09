@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
+import Animated, {
+  useAnimatedScrollHandler,
+  useSharedValue,
+} from 'react-native-reanimated';
+
 import { Container, Content } from './styles';
 
 import { Header } from '../../components/Header';
 import { HighlightsBanner } from '../../components/HighlightsBanner';
-
-import bannerImages from '../../utils/banners';
 import { OptionsMenu } from '../../components/OptionsMenu';
 import { OptionsList, OptionsListProps } from '../../components/OptionsList';
+import { Product } from '../../components/ProductCard';
+
+import bannerImages from '../../utils/banners';
 
 import api from '../../services/api';
-import { Product } from '../../components/ProductCard';
 
 export interface ResponseObject {
   id: string;
@@ -21,6 +26,12 @@ export interface ResponseObject {
 
 export function Home(): JSX.Element {
   const [optionsList, setOptionsList] = useState<OptionsListProps[]>([]);
+
+  const scrollInYAnimation = useSharedValue(0);
+
+  const scrollInYHandler = useAnimatedScrollHandler(event => {
+    scrollInYAnimation.value = event.contentOffset.y;
+  });
 
   useEffect(() => {
     async function loadData() {
@@ -48,14 +59,22 @@ export function Home(): JSX.Element {
 
   return (
     <Container>
-      <Header />
-      <Content>
+      <Header scrollInYAnimation={scrollInYAnimation} />
+      <Animated.ScrollView
+        showsVerticalScrollIndicator={false}
+        onScroll={scrollInYHandler}
+        scrollEventThrottle={16}
+      >
         <HighlightsBanner images={bannerImages} />
         <OptionsMenu />
         {optionsList.map(option => (
-          <OptionsList title={option.title} products={option.products} />
+          <OptionsList
+            key={option.title}
+            title={option.title}
+            products={option.products}
+          />
         ))}
-      </Content>
+      </Animated.ScrollView>
     </Container>
   );
 }

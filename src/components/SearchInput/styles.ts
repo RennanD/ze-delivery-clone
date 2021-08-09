@@ -10,7 +10,7 @@ export const Container = styled.View`
 
   background-color: ${({ theme }) => theme.colors.shape};
 
-  border: 1px solid ${({ theme }) => theme.colors.line};
+  border: 1px solid ${({ theme }) => theme.colors.border};
 
   padding: 0 20px;
 `;

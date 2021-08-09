@@ -2,6 +2,13 @@ import React from 'react';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import Animated, {
+  Extrapolate,
+  interpolate,
+  useAnimatedStyle,
+  interpolateColor,
+} from 'react-native-reanimated';
+
 import { useTheme } from 'styled-components';
 import {
   Container,
@@ -16,11 +23,45 @@ import {
 } from './styles';
 import { SearchInput } from '../SearchInput';
 
-export function Header(): JSX.Element {
+type HeaderProps = {
+  scrollInYAnimation: Animated.SharedValue<number>;
+};
+
+export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
   const theme = useTheme();
 
+  const animatedHeaderStyle = useAnimatedStyle(() => ({
+    transform: [
+      {
+        translateY: interpolate(
+          scrollInYAnimation.value,
+          [0, 150],
+          [0, -60],
+          Extrapolate.CLAMP,
+        ),
+      },
+    ],
+    height: interpolate(
+      scrollInYAnimation.value,
+      [0, 160],
+      [160, 80],
+      Extrapolate.CLAMP,
+    ),
+    opacity: interpolate(
+      scrollInYAnimation.value,
+      [0, 150, 300],
+      [1, 0, 1],
+      Extrapolate.CLAMP,
+    ),
+    backgroundColor: interpolateColor(
+      scrollInYAnimation.value,
+      [0, 150],
+      ['#1A1A1A', 'rgba(0, 0, 0, 0.01)'],
+    ),
+  }));
+
   return (
-    <Container>
+    <Container style={animatedHeaderStyle}>
       <Content>
         <UserAvatarContainer>
           <UserAvatar source={{ uri: 'https://github.com/rennand.png' }} />

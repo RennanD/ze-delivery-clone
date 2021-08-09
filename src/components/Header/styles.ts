@@ -4,8 +4,9 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { Platform } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import Animated from 'react-native-reanimated';
 
-export const Container = styled.View`
+export const Container = styled(Animated.View)`
   background-color: ${({ theme }) => theme.colors.header};
 
   padding: 15px;
