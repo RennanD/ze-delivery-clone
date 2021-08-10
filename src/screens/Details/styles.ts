@@ -12,8 +12,8 @@ export const Header = styled.View`
   width: 100%;
   flex-direction: row;
 
-  padding: 10px 20px;
-  padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() + 20 : 20}px;
+  padding: 10px;
+  padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() + 15 : 15}px;
   justify-content: space-between;
   /* margin-bottom: 10px; */
 `;
@@ -39,7 +39,7 @@ export const CouldBadgeText = styled.Text`
 export const ImageContainer = styled.View`
   align-items: center;
 
-  height: 320px;
+  height: 310px;
   width: 100%;
 
   margin-bottom: 20px;
@@ -74,8 +74,6 @@ export const CheckoutContainer = styled.View`
 `;
 
 export const ProductQuantityInput = styled.View`
-  padding: 0 20px;
-
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -93,16 +91,26 @@ export const ProductQuantityInputText = styled.Text`
   color: ${({ theme }) => theme.colors.bold};
 `;
 
-export const RemoveAmountProductButton = styled.TouchableOpacity``;
+export const RemoveAmountProductButton = styled.TouchableOpacity`
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+`;
 
-export const AddAmountProductButton = styled.TouchableOpacity``;
+export const AddAmountProductButton = styled.TouchableOpacity`
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const AddManyProductsContainer = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 export const AddManyProductsButton = styled.TouchableOpacity`
@@ -116,7 +124,7 @@ export const AddManyProductsButton = styled.TouchableOpacity`
 
   border: 1px solid ${({ theme }) => theme.colors.line};
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `;
 
 export const AddManyProductsText = styled.Text`

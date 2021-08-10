@@ -126,7 +126,7 @@ export function Details(): JSX.Element {
         </AddManyProductsContainer>
 
         <AddToCartButton>
-          <AddToCartButtonText>Adicionar ({quantity})</AddToCartButtonText>
+          <AddToCartButtonText>ADICIONAR ({quantity})</AddToCartButtonText>
           <AddToCartButtonText>{totalPrice}</AddToCartButtonText>
         </AddToCartButton>
       </CheckoutContainer>

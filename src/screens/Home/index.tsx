@@ -4,8 +4,10 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
+import { ActivityIndicator } from 'react-native';
 
-import { Container } from './styles';
+import { useTheme } from 'styled-components';
+import { Container, LoadingContainer } from './styles';
 
 import { Header } from '../../components/Header';
 import { HighlightsBanner } from '../../components/HighlightsBanner';
@@ -26,6 +28,9 @@ export interface ResponseObject {
 
 export function Home(): JSX.Element {
   const [optionsList, setOptionsList] = useState<OptionsListProps[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const theme = useTheme();
 
   const scrollInYAnimation = useSharedValue(0);
 
@@ -35,6 +40,7 @@ export function Home(): JSX.Element {
 
   useEffect(() => {
     async function loadData() {
+      setLoading(true);
       const response = await api.get<ResponseObject[]>('/categories');
 
       const data = response.data.map(item => ({
@@ -52,6 +58,7 @@ export function Home(): JSX.Element {
         })),
       }));
       setOptionsList(data);
+      setLoading(false);
     }
 
     loadData();
@@ -60,24 +67,30 @@ export function Home(): JSX.Element {
   return (
     <Container>
       <Header scrollInYAnimation={scrollInYAnimation} />
-      <Animated.ScrollView
-        showsVerticalScrollIndicator={false}
-        onScroll={scrollInYHandler}
-        scrollEventThrottle={16}
-        contentContainerStyle={{
-          paddingBottom: 50,
-        }}
-      >
-        <HighlightsBanner images={bannerImages} />
-        <OptionsMenu />
-        {optionsList.map(option => (
-          <OptionsList
-            key={option.title}
-            title={option.title}
-            products={option.products}
-          />
-        ))}
-      </Animated.ScrollView>
+      {loading ? (
+        <LoadingContainer>
+          <ActivityIndicator size={32} color={theme.colors.primary} />
+        </LoadingContainer>
+      ) : (
+        <Animated.ScrollView
+          showsVerticalScrollIndicator={false}
+          onScroll={scrollInYHandler}
+          scrollEventThrottle={16}
+          contentContainerStyle={{
+            paddingBottom: 50,
+          }}
+        >
+          <HighlightsBanner images={bannerImages} />
+          <OptionsMenu />
+          {optionsList.map(option => (
+            <OptionsList
+              key={option.title}
+              title={option.title}
+              products={option.products}
+            />
+          ))}
+        </Animated.ScrollView>
+      )}
     </Container>
   );
 }
