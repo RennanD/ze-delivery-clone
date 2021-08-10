@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -27,6 +28,9 @@ type HeaderProps = {
   scrollInYAnimation: Animated.SharedValue<number>;
 };
 
+const HEIGHT = Platform.OS === 'ios' ? 170 : 140;
+const HEIGHT_ANIMATED = Platform.OS === 'ios' ? 110 : 80;
+
 export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
   const theme = useTheme();
 
@@ -35,7 +39,7 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
       {
         translateY: interpolate(
           scrollInYAnimation.value,
-          [0, 140],
+          [0, HEIGHT],
           [0, -60],
           Extrapolate.CLAMP,
         ),
@@ -43,19 +47,19 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
     ],
     height: interpolate(
       scrollInYAnimation.value,
-      [0, 140],
-      [140, 80],
+      [0, HEIGHT],
+      [HEIGHT, HEIGHT_ANIMATED],
       Extrapolate.CLAMP,
     ),
     opacity: interpolate(
       scrollInYAnimation.value,
-      [0, 100, 140],
+      [0, HEIGHT_ANIMATED, HEIGHT],
       [1, 0, 1],
       Extrapolate.CLAMP,
     ),
     backgroundColor: interpolateColor(
       scrollInYAnimation.value,
-      [0, 140],
+      [0, HEIGHT],
       ['#1A1A1A', 'rgba(0, 0, 0, 0.01)'],
     ),
   }));

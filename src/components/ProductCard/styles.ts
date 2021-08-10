@@ -16,18 +16,22 @@ export const Container = styled.TouchableOpacity`
   margin-bottom: 5px;
 `;
 
-export const BadgeDiscount = styled.Text`
-  padding: 3px 5px;
-  background-color: ${({ theme }) => theme.colors.attention};
-  color: ${({ theme }) => theme.colors.shape};
+export const BadgeDiscountContainer = styled.View`
   position: absolute;
-  border-radius: 8px;
+  border-radius: 10px;
 
   z-index: 5;
 
   top: 7px;
   left: 7px;
+
+  padding: 3px 5px;
+  background-color: ${({ theme }) => theme.colors.attention};
+`;
+
+export const BadgeDiscount = styled.Text`
   font-size: ${RFValue(12)}px;
+  color: ${({ theme }) => theme.colors.shape};
 `;
 
 export const ProductInfo = styled.View`

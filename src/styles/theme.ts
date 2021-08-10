@@ -7,9 +7,10 @@ export default {
     section_title: '#9B9B9B',
     text: '#656565',
     placeholder: '#C9C9C9',
-    line: '#717171',
+    line: '#DBDBDB',
     border: 'rgba(0, 0, 0, 0.06)',
-    bold: '#000',
+    bold: '#2D2D2D',
     attention: '#F43F3E',
+    could: '#DEF0FE',
   },
 };

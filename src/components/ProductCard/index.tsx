@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   ProductInfo,
@@ -11,6 +13,7 @@ import {
   shadowStyle,
   Hr,
   BadgeDiscount,
+  BadgeDiscountContainer,
 } from './styles';
 
 export type Product = {
@@ -27,11 +30,27 @@ type ProductCardProps = {
   product: Product;
 };
 
+type Nativation = {
+  navigate: (screen: string, params: any) => void;
+};
+
 export function ProductCard({ product }: ProductCardProps): JSX.Element {
+  const { navigate } = useNavigation<Nativation>();
+
+  function handleShowProductDetail() {
+    navigate('Details', { product });
+  }
+
   return (
-    <Container style={shadowStyle} activeOpacity={0.9}>
+    <Container
+      style={shadowStyle}
+      activeOpacity={0.7}
+      onPress={handleShowProductDetail}
+    >
       {!!product.discount && (
-        <BadgeDiscount>-{product.discount}%</BadgeDiscount>
+        <BadgeDiscountContainer>
+          <BadgeDiscount>-{product.discount}%</BadgeDiscount>
+        </BadgeDiscountContainer>
       )}
       <ProductImage source={{ uri: product.image }} />
       <Hr />

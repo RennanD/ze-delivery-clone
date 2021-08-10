@@ -1,9 +1,8 @@
 import { Feather } from '@expo/vector-icons';
-import React from 'react';
-import { View } from 'react-native';
+import React, { useState, useMemo } from 'react';
 import { useTheme } from 'styled-components';
 
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import {
   Container,
   Header,
@@ -16,6 +15,7 @@ import {
   ProductPrice,
   CheckoutContainer,
   ProductQuantityInput,
+  ProductQuantityInputText,
   RemoveAmountProductButton,
   AddAmountProductButton,
   AddManyProductsContainer,
@@ -23,6 +23,7 @@ import {
   AddManyProductsText,
   AddToCartButton,
   AddToCartButtonText,
+  CouldBadgeText,
 } from './styles';
 
 import { Product } from '../../components/ProductCard';
@@ -34,59 +35,99 @@ type RouteParams = {
 };
 
 export function Details(): JSX.Element {
+  const route = useRoute();
+  const { product } = route.params as RouteParams;
+  const { goBack } = useNavigation();
+
+  const [quantity, setQuantity] = useState(1);
+  const [price] = useState(() => {
+    if (product.discount > 0) {
+      return product.price - (product.discount / 100) * product.price;
+    }
+    return product.price;
+  });
+
   const theme = useTheme();
 
-  const route = useRoute();
+  const [quantityLeft, quantityRight] = useMemo(
+    () => String(quantity).padStart(2, '0').split(''),
+    [quantity],
+  );
 
-  const { product } = route.params as RouteParams;
+  const totalPrice = useMemo(() => {
+    const totalPriceAmount = quantity * price;
+
+    return Intl.NumberFormat('pt-BR', {
+      currency: 'BRL',
+      style: 'currency',
+    }).format(totalPriceAmount);
+  }, [quantity, price]);
+
+  function handleAddProductAmount(amount: number) {
+    if (amount < 0 && quantity === 1) return;
+
+    setQuantity(oldState => oldState + amount);
+  }
 
   return (
     <Container>
       <Header>
-        <BackButton>
-          <Feather name="arrow-left" color={theme.colors.text} size={32} />
-          <CouldBadge>
-            <SnowflakeIcon width={24} height={24} />
-          </CouldBadge>
+        <BackButton onPress={goBack}>
+          <Feather
+            name="arrow-left"
+            color={theme.colors.placeholder}
+            size={28}
+          />
         </BackButton>
+        <CouldBadge>
+          <SnowflakeIcon width={24} height={24} />
+          <CouldBadgeText>GELADA</CouldBadgeText>
+        </CouldBadge>
       </Header>
       <ImageContainer>
-        <ProductImage source={product.image} />
+        <ProductImage resizeMode="cover" source={{ uri: product.image }} />
       </ImageContainer>
 
       <ProductDetails>
         <ProductDescription>{product.description}</ProductDescription>
-        <ProductPrice>{product.priceFormated}</ProductPrice>
+        <ProductPrice>
+          {product.discount ? product.discountFormated : product.priceFormated}
+        </ProductPrice>
       </ProductDetails>
 
       <CheckoutContainer>
         <ProductQuantityInput>
-          <RemoveAmountProductButton>
-            <Feather name="minus" color={theme.colors.text} size={24} />
+          <RemoveAmountProductButton onPress={() => handleAddProductAmount(-1)}>
+            <Feather name="minus" color={theme.colors.placeholder} size={24} />
           </RemoveAmountProductButton>
 
-          <AddAmountProductButton>
+          <ProductQuantityInputText>
+            {quantityLeft}
+            {quantityRight}
+          </ProductQuantityInputText>
+
+          <AddAmountProductButton onPress={() => handleAddProductAmount(1)}>
             <Feather name="plus" color={theme.colors.primary} size={24} />
           </AddAmountProductButton>
         </ProductQuantityInput>
 
         <AddManyProductsContainer>
-          <AddManyProductsButton>
+          <AddManyProductsButton onPress={() => handleAddProductAmount(6)}>
             <AddManyProductsText>+ 6 un.</AddManyProductsText>
           </AddManyProductsButton>
 
-          <AddManyProductsButton>
-            <AddManyProductsText>+ 6 un.</AddManyProductsText>
+          <AddManyProductsButton onPress={() => handleAddProductAmount(12)}>
+            <AddManyProductsText>+ 12 un.</AddManyProductsText>
           </AddManyProductsButton>
 
-          <AddManyProductsButton>
-            <AddManyProductsText>+ 6 un.</AddManyProductsText>
+          <AddManyProductsButton onPress={() => handleAddProductAmount(15)}>
+            <AddManyProductsText>+ 15 un.</AddManyProductsText>
           </AddManyProductsButton>
         </AddManyProductsContainer>
 
         <AddToCartButton>
-          <AddToCartButtonText>Adicionar (1)</AddToCartButtonText>
-          <AddToCartButtonText>2,99</AddToCartButtonText>
+          <AddToCartButtonText>Adicionar ({quantity})</AddToCartButtonText>
+          <AddToCartButtonText>{totalPrice}</AddToCartButtonText>
         </AddToCartButton>
       </CheckoutContainer>
     </Container>
