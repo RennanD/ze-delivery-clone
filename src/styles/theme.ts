@@ -11,6 +11,6 @@ export default {
     border: 'rgba(0, 0, 0, 0.06)',
     bold: '#2D2D2D',
     attention: '#F43F3E',
-    could: '#DEF0FE',
+    cold: '#DEF0FE',
   },
 };

@@ -20,6 +20,7 @@ export type Product = {
   id: string;
   description: string;
   image: string;
+  cold: boolean;
   price: number;
   priceFormated: string;
   discount: number;

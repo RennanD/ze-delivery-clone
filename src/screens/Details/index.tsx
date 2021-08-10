@@ -7,7 +7,7 @@ import {
   Container,
   Header,
   BackButton,
-  CouldBadge,
+  ColdBadge,
   ImageContainer,
   ProductImage,
   ProductDetails,
@@ -23,7 +23,7 @@ import {
   AddManyProductsText,
   AddToCartButton,
   AddToCartButtonText,
-  CouldBadgeText,
+  ColdBadgeText,
 } from './styles';
 
 import { Product } from '../../components/ProductCard';
@@ -79,10 +79,12 @@ export function Details(): JSX.Element {
             size={28}
           />
         </BackButton>
-        <CouldBadge>
-          <SnowflakeIcon width={24} height={24} />
-          <CouldBadgeText>GELADA</CouldBadgeText>
-        </CouldBadge>
+        {product.cold && (
+          <ColdBadge>
+            <SnowflakeIcon width={24} height={24} />
+            <ColdBadgeText>GELADA</ColdBadgeText>
+          </ColdBadge>
+        )}
       </Header>
       <ImageContainer>
         <ProductImage resizeMode="cover" source={{ uri: product.image }} />
@@ -98,7 +100,13 @@ export function Details(): JSX.Element {
       <CheckoutContainer>
         <ProductQuantityInput>
           <RemoveAmountProductButton onPress={() => handleAddProductAmount(-1)}>
-            <Feather name="minus" color={theme.colors.placeholder} size={24} />
+            <Feather
+              name="minus"
+              color={
+                quantity === 1 ? theme.colors.placeholder : theme.colors.primary
+              }
+              size={24}
+            />
           </RemoveAmountProductButton>
 
           <ProductQuantityInputText>

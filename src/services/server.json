@@ -10,6 +10,7 @@
           "description": "Brahma Duplo Malte 350ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010266_993f6927-e697-4dca-b4e6-e118d99be4c8.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 2.99,
+          "cold": true,
           "discount": 0
         },
         {
@@ -17,6 +18,7 @@
           "description": "Brahma Chopp 300ml | Apenas o Líquido",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00008729_e095d6d8-7491-458c-8225-1ee8e9b76d27.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 1.99,
+          "cold": true,
           "discount": 0
         },
         {
@@ -24,6 +26,7 @@
           "description": "Brahma Duplo Malte 600ml | Vasilhame Incluso",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010270_136ef006-495f-4833-987d-0bad35477e99.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 7.49,
+          "cold": true,
           "discount": 0
         },
         {
@@ -31,6 +34,7 @@
           "description": "Brahma Duplo Malte 600ml | Apenas o Líquido",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010267_7d528cff-dcf0-4a05-aef9-fc3ce95e7aa4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 6.49,
+          "cold": true,
           "discount": 20
         },
         {
@@ -38,6 +42,7 @@
           "description": "Original 600ml | Apenas o Líquido",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00008771_d5eab2b2-854b-4558-92d2-668f5aef0e3f.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 6.99,
+          "cold": true,
           "discount": 0
         }
       ]
@@ -52,6 +57,7 @@
           "description": "Beats Senses 269ml - Unidade",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00008599_8d1176b4-22be-4b1c-8e42-824d4a263441.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 4.49,
+          "cold": false,
           "discount": 30
         },
         {
@@ -59,6 +65,7 @@
           "description": "Smirnoff Ice 275ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010802_5b65acc7-bc1c-4e04-a07f-89681962f7f5.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 7.99,
+          "cold": false,
           "discount": 0
         },
         {
@@ -66,6 +73,7 @@
           "description": "Beats Zodiac Fogo 269ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00012574_e7ca39e9-8a6f-4790-aa58-667a575a25a6.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 4.99,
+          "cold": false,
           "discount": 0
         },
         {
@@ -73,6 +81,7 @@
           "description": "Vodka Smirnoff 998ml",
           "image": "https://courier-images-prod.imgix.net/product/00009518_97115052-d9fc-46c3-bc39-33b4cec15cd5.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 41.16,
+          "cold": false,
           "discount": 20
         },
         {
@@ -80,6 +89,7 @@
           "description": "Beats Zodiac Terra 269ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00012573_f630ea47-d405-4810-b63b-72edb5ee9860.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 6.99,
+          "cold": false,
           "discount": 0
         }
       ]
@@ -94,6 +104,7 @@
           "description": "Vinho Tinto Chileno Merlot Reservado Santa Helena 750ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00013770_dd054c7d-d8f1-49f2-a268-de3ef341ac68.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 76.9,
+          "cold": false,
           "discount": 0
         },
         {
@@ -101,6 +112,7 @@
           "description": "Vinho Tinto Português Sweet Red Casal Garcia 750 ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00013783_5453d011-aadc-49fa-8029-c061cdfd9b0c.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 7.99,
+          "cold": false,
           "discount": 0
         },
         {
@@ -108,6 +120,7 @@
           "description": "Vinho Tinto Chileno Malbec Reservado Santa Helena 750 ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00013767_2e8e7d39-28d3-4da2-a06d-15d7cbb0e579.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 46.9,
+          "cold": false,
           "discount": 0
         },
         {
@@ -115,6 +128,7 @@
           "description": "Vinho Rosé Chileno Reservado Santa Helena 750 ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00013768_920537a8-7a9a-48c0-9df4-d2e7cdfc2c37.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 46.9,
+          "cold": false,
           "discount": 0
         },
         {
@@ -122,6 +136,7 @@
           "description": "Vinho Rosé Casal Garcia 750 ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00013781_ed903529-9921-41b1-a0fc-87f2eef76c50.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 76.9,
+          "cold": false,
           "discount": 0
         }
       ]
@@ -136,6 +151,7 @@
           "description": "Red Bull Energy Drink 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00009995_526cce9e-7eaf-454f-9849-102e201c53e2.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 7.0,
+          "cold": true,
           "discount": 0
         },
         {
@@ -143,6 +159,7 @@
           "description": "Red Bull Sugarfree 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00009996_8d199ddc-23ad-4436-a677-9d40402a5cb4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 7.0,
+          "cold": true,
           "discount": 0
         },
         {
@@ -150,6 +167,7 @@
           "description": "Red Bull Coco e Açaí 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00011344_d9197b11-e04b-4210-90b0-0ffcb83a92a0.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 8.5,
+          "cold": true,
           "discount": 0
         },
         {
@@ -157,6 +175,7 @@
           "description": "Red Bull Energy Drink 473ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00011030_b2a07ff1-1416-4b07-823d-fce87ae22de9.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 14.99,
+          "cold": true,
           "discount": 0
         },
         {
@@ -164,6 +183,54 @@
           "description": "Red Bull Melancia 250ml",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00012306_dce9ec3d-3900-48b6-a5b4-dcdd34d6d3d6.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 8.94,
+          "cold": true,
+          "discount": 0
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "key": "others",
+      "name": "LOJINHA",
+      "products": [
+        {
+          "id": "1",
+          "description": "Saco de Gelo em Cubos - 2kg",
+          "image": "https://courier-images-prod.imgix.net/product/00009339_d3162348-c1f7-4dc0-95d0-0bca8e14ab06.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 8.49,
+          "cold": true,
+          "discount": 0
+        },
+        {
+          "id": "2",
+          "description": "Sal Grosso 1kg",
+          "image": "https://courier-images-prod.imgix.net/product/00009368_2b3dbc2f-7d36-4e9c-94e3-dc283a40a2bf.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 5.0,
+          "cold": false,
+          "discount": 0
+        },
+        {
+          "id": "3",
+          "description": "Isqueiro Bic Grande - Unidade",
+          "image": "https://courier-images-prod.imgix.net/produc_variant/9666_c2a656f4-19bc-43c5-bb38-0d0494c6f3b8.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 5.99,
+          "cold": false,
+          "discount": 0
+        },
+        {
+          "id": "4",
+          "description": "Copo Plástico 300ml",
+          "image": "https://courier-images-prod.imgix.net/product/00009359_ba6b7b62-da76-4a8c-9618-c41ae32403bd.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 8.0,
+          "cold": false,
+          "discount": 0
+        },
+        {
+          "id": "5",
+          "description": "Guardanapo de Papel",
+          "image": "https://courier-images-prod.imgix.net/product/00009365_34b2ce86-2a64-4113-9753-8f873ba74183.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+          "price": 3.0,
+          "cold": false,
           "discount": 0
         }
       ]
@@ -178,6 +245,7 @@
           "description": "Ovinhos de Amendoim Elma Chips 170g",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010725_d2fd2616-28a8-46ea-adac-a9abb72b12c9.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 5.69,
+          "cold": false,
           "discount": 0
         },
         {
@@ -185,6 +253,7 @@
           "description": "Doritos Queijo Nacho 55g",
           "image": "https://courier-images-prod.imgix.net/product/00009407_91c56ba0-0fe4-4ee5-a3e7-938ce2f13367.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 4.99,
+          "cold": false,
           "discount": 0
         },
         {
@@ -192,6 +261,7 @@
           "description": "Cheetos Onda Requeijão 42g",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010176_e244bd18-d85b-422c-ad5b-d8c3718bc1fb.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 2.59,
+          "cold": false,
           "discount": 0
         },
         {
@@ -199,6 +269,7 @@
           "description": "Doritos Queijo Nacho 84g",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00012163_2dcd53f5-c3a5-4c0a-963d-770d90432a0c.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 6.49,
+          "cold": false,
           "discount": 0
         },
         {
@@ -206,6 +277,7 @@
           "description": "Doritos Queijo Nacho 48g",
           "image": "https://courier-images-prod.imgix.net/produc_variant/00010179_dda3ae8a-8cc2-4a17-a119-183f4e1b621f.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
           "price": 4.69,
+          "cold": false,
           "discount": 0
         }
       ]

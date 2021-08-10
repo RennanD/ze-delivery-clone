@@ -20,9 +20,9 @@ export const Header = styled.View`
 
 export const BackButton = styled.TouchableOpacity``;
 
-export const CouldBadge = styled.View`
+export const ColdBadge = styled.View`
   padding: 10px;
-  background-color: ${({ theme }) => theme.colors.could};
+  background-color: ${({ theme }) => theme.colors.cold};
 
   border-radius: 8px;
   flex-direction: row;
@@ -30,7 +30,7 @@ export const CouldBadge = styled.View`
   align-items: center;
 `;
 
-export const CouldBadgeText = styled.Text`
+export const ColdBadgeText = styled.Text`
   margin-left: 8px;
   font-size: ${RFValue(13)}px;
   color: ${({ theme }) => theme.colors.text};
